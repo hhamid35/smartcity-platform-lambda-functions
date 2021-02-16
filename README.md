@@ -1,5 +1,7 @@
 # Smartcity Platform Lambda Functions
 
+![Alt text](iot_component_diagram_new.png?raw=true "Smarcity Platform Component Diagram")
+
 To package your function please run the following commands
 
 `cd ~/MyFunctionName`
