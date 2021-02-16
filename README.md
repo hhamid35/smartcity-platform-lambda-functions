@@ -1,15 +1,15 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
- ----------------------------------------------------------------- 
+# Smartcity Platform Lambda Functions
 
+To package your function please run the following commands
 
-Hi there! Welcome to AWS Cloud9!
+`cd ~/MyFunctionName`
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+`zip -r  MyFunctionName.zip MyFunctionName.py greengrasssdk`
 
-Happy coding!
-# smartcity-platform-lambda-functions
+To create a new lambda function, run the following commands
+
+`aws lambda create-function --function-name MyFunctionName --zip-file fileb://MyFunctionName.zip --handler MyFunctionName.function_handler --runtime python3.x  --role arn:aws:iam::MyFunctionName:role/lambda-ex`
+
+To update the lambda function code, run the following command
+
+`aws lambda update-function-code --function-name MyFunctionName --zip-file fileb://MyFunctionName.zip`
