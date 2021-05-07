@@ -74,6 +74,8 @@ def function_handler(event, context):
             'timestamp': event['timestamp'],
         }
         
+        
+        
         client.publish(topic=OUTPUT_TOPIC, payload=json.dumps(http_request))
         
         application_url_prefix = 'http://' + application_endpoint + ':' + str(application_port)
